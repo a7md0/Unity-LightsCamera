@@ -11,7 +11,8 @@ public class ThirdPersonCamera : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
@@ -26,6 +27,6 @@ public class ThirdPersonCamera : MonoBehaviour
         //Get mouse input, and rotate accordingly
         xInput = Input.GetAxis("Mouse X");
         yInput = -Input.GetAxis("Mouse Y");
-        transform.Rotate(new Vector3(-yInput, xInput, 0));
+        transform.Rotate(new Vector3(yInput, xInput, 0));
     }
 }
