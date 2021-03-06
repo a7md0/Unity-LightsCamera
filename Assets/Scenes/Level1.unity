@@ -602,7 +602,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -871,6 +871,7 @@ GameObject:
   - component: {fileID: 486359213}
   - component: {fileID: 486359212}
   - component: {fileID: 486359211}
+  - component: {fileID: 486359216}
   m_Layer: 0
   m_Name: ThirdPersonPlayer
   m_TagString: Untagged
@@ -967,6 +968,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &486359216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 486359210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 048d6e3428267d44ca2dbd681d239d3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spotLightObject: {fileID: 918066227}
+  spotLightIncrement: 2
+  pointLightObject: {fileID: 299639100}
+  pointLightIncrement: 1
 --- !u!1 &704094774
 GameObject:
   m_ObjectHideFlags: 0
@@ -1064,7 +1081,7 @@ Light:
   m_Color: {r: 0.8301887, g: 0.78163624, b: 0.27020293, a: 1}
   m_Intensity: 2.2
   m_Range: 7.8
-  m_SpotAngle: 49.4
+  m_SpotAngle: 61.2
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
@@ -1101,7 +1118,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
