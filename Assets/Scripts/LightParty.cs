@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 
+using UnityEngine.UI;
+
 public class LightParty : MonoBehaviour
 {
     public GameObject spotLightObject;
@@ -12,6 +14,8 @@ public class LightParty : MonoBehaviour
     private Light pointLight;
     private Range<float> pointLightRange = new Range<float>(0f, 5f);
     public float pointLightIncrement = 1f;
+
+    public Text uiHeader;
 
     private void Start() {
         spotLight = spotLightObject.GetComponent<Light>(); // Get light component out from the game object
@@ -33,6 +37,8 @@ public class LightParty : MonoBehaviour
             pointLight.intensity = incrementValue(pointLight.intensity, pointLightRange, pointLightIncrement); // Change intensity
             //print($"pointLight.intensity {pointLight.intensity}");
         }
+
+        uiHeader.text = $"spotLight intensity = {spotLight.intensity}, pointLight.intensity = {pointLight.intensity}";
     }
 
     float incrementValue(float value, Range<float> range, float increment = 1f) {
